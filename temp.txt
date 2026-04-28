@@ -1,0 +1,23 @@
+2844:                      value={newAnniversaryTitle || ''}
+2900:                    value={(userBirthday && userBirthday.split('-')[0]) || '2000'}
+2908:                      <option key={y} value={y.toString()}>{y}年</option>
+2912:                    value={(userBirthday && userBirthday.split('-')[1]) || '01'}
+2920:                      <option key={m} value={m.toString()}>{m}月</option>
+2924:                    value={(userBirthday && userBirthday.split('-')[2]) || '01'}
+2932:                      <option key={d} value={d.toString()}>{d}日</option>
+2941:                    value={userZodiac || ''}
+2947:                      <option key={z} value={z}>{z}</option>
+2955:                    value={userMBTI || ''}
+3072:                value={apiKey || ''}
+3086:                value={baseUrl || ''}
+3117:                value={modelName || ''}
+3327:                    value={tempRemark || ''}
+3502:                  value={letterInput || ''}
+3639:                  value={whisperInput || ''}
+4241:                      value={customOutline || ''}
+4466:                      value={replyInputs[post.id] || ''}
+4506:                    value={newPostContent || ''}
+4603:              value={userBio || ''}
+4615:                value={userName || ''}
+5261:                          value={transferAmount || ''}
+5298:              value={input || ''}

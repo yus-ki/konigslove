@@ -1,0 +1,46 @@
+7165:        days.push(<div key={`empty-${i}`} className="h-12" />);
+7178:            key={d}
+7240:                <div key={day} className="text-[10px] font-black text-zinc-600 uppercase text-center tracking-widest">
+7268:                    <div key={ann.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex items-center justify-between group">
+7403:                      <option key={y} value={y.toString()}>{y}年</option>
+7415:                      <option key={m} value={m.toString()}>{m}月</option>
+7427:                      <option key={d} value={d.toString()}>{d}日</option>
+7445:                      <option key={z} value={z}>{z}</option>
+7500:                key={divinationResult.date}
+7547:                    <div key={idx} className="bg-black/30 border border-zinc-800/50 rounded-2xl p-4 space-y-2">
+7595:                key={i}
+7671:                        <div key={idx} className="flex-shrink-0 w-32 aspect-[2/3] snap-center transition-all duration-300">
+7698:                      <div key={i} className="w-16 h-24 border-[2px] border-amber-600/50 rounded-lg flex items-center justify-center bg-zinc-950 relative overflow-hidden">
+7723:                        key={i}
+8030:                      key={preset.name}
+8049:                      key={api.name}
+8575:                  <div key={entry.date + '-' + idx} className="p-4 bg-zinc-900/50 border border-zinc-800 rounded-2xl space-y-2">
+8663:                            <option key={i} value={i}>{i}:00</option>
+8675:                            <option key={i} value={i}>{i}:00</option>
+8776:                  <div key={letter.id} className="space-y-4">
+8919:                  <div key={msg.id} className="space-y-2">
+9012:            <div key={cat.id} className="space-y-4">
+9021:                  <div key={product.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex flex-col space-y-3 group hover:border-pink-500/30 transition-all overflow-hidden">
+9114:                          <div key={item.id} className="bg-black border border-zinc-800 rounded-2xl p-4 flex items-center justify-between">
+9215:                    <div key={t.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex items-center justify-between group hover:border-pink-500/30 transition-all">
+9247:                    <div key={t.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex items-center justify-between group hover:border-zinc-700 transition-all">
+9389:                        <div key={game.id} className="relative group">
+9449:                            key={ach.id}
+9474:                      key={`${idx}-${h.role}-${h.text.substring(0, 5)}`}
+9559:                            key={i}
+9669:                          key={t}
+9800:                      key={novel.id} 
+9884:                      key={novel.id}
+9945:                        key={genre}
+10028:                      <p key={i} className="first-letter:text-2xl first-letter:font-black first-letter:text-pink-500 first-letter:mr-1">
+10164:            <div key={post.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 flex flex-col gap-4 shadow-sm">
+10222:                        <div key={reply.id} className="flex gap-2 cursor-pointer hover:bg-zinc-800/50 p-1 rounded-lg transition-colors" onClick={() => {
+10424:                    key={memory.id}
+10500:                  key={secret.id}
+10804:                    key={item.id} 
+10941:                  <div key={r.id} className="relative overflow-hidden rounded-[2rem]">
+11185:                            <option key={i} value={i}>{i}:00</option>
+11198:                            <option key={i} value={i}>{i}:00</option>
+11505:              key={msg.id}
+11662:                                      key={i}
+11874:                        key={msg.id} 

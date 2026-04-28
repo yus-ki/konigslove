@@ -1,0 +1,4 @@
+2908:                      <option key={y} value={y.toString()}>{y}年</option>
+2920:                      <option key={m} value={m.toString()}>{m}月</option>
+2932:                      <option key={d} value={d.toString()}>{d}日</option>
+2947:                      <option key={z} value={z}>{z}</option>

@@ -1,0 +1,174 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores user preferences, Konig state, and basic info",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "userName": { "type": "string" },
+        "userBio": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "userBirthday": { "type": "string" },
+        "balance": { "type": "number" },
+        "konigRemark": { "type": "string" },
+        "konigAvatar": { "type": "string" },
+        "konigStatus": { "type": "string", "enum": ["online", "offline", "on_duty"] },
+        "konigActivity": { "type": "string" },
+        "konigThought": { "type": "string" },
+        "longTermMemory": { "type": "string" },
+        "createdAt": { "type": "number" }
+      },
+      "required": ["uid", "email"]
+    },
+    "Message": {
+      "title": "Chat Message",
+      "description": "Stores chat history between user and Konig",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "model", "system"] },
+        "text": { "type": "string" },
+        "image": { "type": "string" },
+        "audio": { "type": "string" },
+        "timestamp": { "type": "number" },
+        "transfer": {
+          "type": "object",
+          "properties": {
+            "amount": { "type": "number" },
+            "status": { "type": "string", "enum": ["pending", "accepted", "returned"] }
+          }
+        }
+      },
+      "required": ["id", "role", "timestamp"]
+    },
+    "Transaction": {
+      "title": "Financial Transaction",
+      "description": "Stores user transactions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "type": { "type": "string", "enum": ["income", "expense"] },
+        "amount": { "type": "number" },
+        "title": { "type": "string" },
+        "date": { "type": "number" }
+      },
+      "required": ["id", "type", "amount", "date"]
+    },
+    "InventoryItem": {
+      "title": "Inventory Item",
+      "description": "Stores items owned by the user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "type": { "type": "string" },
+        "price": { "type": "number" },
+        "acquiredAt": { "type": "number" }
+      },
+      "required": ["id", "title", "type"]
+    },
+    "Anniversary": {
+      "title": "Anniversary",
+      "description": "Stores user calendar events",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "title": { "type": "string" }
+      },
+      "required": ["id", "date", "title"]
+    },
+    "Post": {
+      "title": "Moment Post",
+      "description": "Stores posts in the Moments feed",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "author": { "type": "string" },
+        "avatar": { "type": "string" },
+        "content": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "timestamp": { "type": "number" },
+        "likes": { "type": "number" },
+        "likedByMe": { "type": "boolean" },
+        "comments": { "type": "number" },
+        "replies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "author": { "type": "string" },
+              "avatar": { "type": "string" },
+              "content": { "type": "string" },
+              "timestamp": { "type": "number" }
+            }
+          }
+        }
+      },
+      "required": ["id", "author", "timestamp"]
+    },
+    "Memory": {
+      "title": "Daily Memory",
+      "description": "Stores daily summaries of interactions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "date": { "type": "string" },
+        "summary": { "type": "string" },
+        "timestamp": { "type": "number" }
+      },
+      "required": ["id", "date", "summary", "timestamp"]
+    },
+    "Secret": {
+      "title": "User Secret",
+      "description": "Stores things Konig knows about the user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fact": { "type": "string" },
+        "annotation": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "fact", "annotation", "date"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/users/{userId}/messages/{messageId}": {
+      "schema": "Message",
+      "description": "User chat history"
+    },
+    "/users/{userId}/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "User transaction history"
+    },
+    "/users/{userId}/inventory/{itemId}": {
+      "schema": "InventoryItem",
+      "description": "User inventory"
+    },
+    "/users/{userId}/anniversaries/{anniversaryId}": {
+      "schema": "Anniversary",
+      "description": "User calendar events"
+    },
+    "/users/{userId}/posts/{postId}": {
+      "schema": "Post",
+      "description": "User moments feed"
+    },
+    "/users/{userId}/memories/{memoryId}": {
+      "schema": "Memory",
+      "description": "Daily interaction summaries"
+    },
+    "/users/{userId}/secrets/{secretId}": {
+      "schema": "Secret",
+      "description": "Things Konig knows about the user"
+    }
+  }
+}
