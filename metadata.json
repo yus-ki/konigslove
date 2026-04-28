@@ -1,5 +1,0 @@
-{
-  "name": "König",
-  "description": "Private chat with König.",
-  "requestFramePermissions": ["microphone"]
-}
